@@ -4,8 +4,12 @@ const { Header, Footer, Sider, Content } = Layout
 
 const MenuLayout = () => (
   <>
-    <Layout>
-      <Sider>Sider</Sider>
+    <Layout style={{ height:'100vh' }}>
+      <Sider 
+        style={{ backgroundColor: '#fff' }}
+      >
+        Sider
+      </Sider>
       <Layout>
         <Header>Header</Header>
         <Content>Content</Content>
