@@ -44,33 +44,34 @@ const TopNav = (props) => {
     const { title, topNavContainerStyles, handleToggleLeftNav } = props
     return (
         <Header 
-            style={{ ...containerStyles, ...topNavContainerStyles }}
+          style={{ ...containerStyles, ...topNavContainerStyles }}
         >   
             <Button
-                style={{
-                    padding: 0,
-                    width: '40px'
-                }} 
-                onClick={ handleToggleLeftNav }
+              style={{
+                padding: 0,
+                width: '40px'
+              }} 
+              onClick={ handleToggleLeftNav }
             >
-                <LeftSquareOutlined />
+              <LeftSquareOutlined />
             </Button>
             <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 5, width:'90%'}}>
                 <Title level={ 5 } ellipsis={ true } style={{ margin: 0, fontWeight: 500 }}>{ title }</Title>
             </div>
 
             <Dropdown 
-                overlay={menu} 
-                placement="bottomRight" 
-                arrow
+              overlay={menu} 
+              placement="bottomRight" 
+              arrow
             >
-                <Button 
-                    style={{
-                        marginLeft: 'auto',
-                        borderRadius: '20px'
-                    }}
-                ><MoreOutlined />
-            </Button>
+              <Button 
+                style={{
+                  marginLeft: 'auto',
+                  borderRadius: '20px'
+                }}
+              >
+                <MoreOutlined />
+              </Button>
             </Dropdown>
         </Header>
     )
